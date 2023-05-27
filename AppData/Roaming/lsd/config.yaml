@@ -1,0 +1,11 @@
+date: '+%Y/%m/%d %H:%M:%S'
+icons:
+  when: never
+size: short
+symlink-arrow: ->
+blocks:
+  - permission
+  - user
+  - size
+  - date
+  - name
