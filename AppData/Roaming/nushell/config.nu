@@ -2,24 +2,25 @@
 
 alias ll = lsd -la
 alias vim = nvim
+alias g = git
 
-let-env https_proxy = 'localhost:1080'
-let-env http_proxy = 'localhost:1080'
-let-env no_proxy = 'localhost,127.0.0.1,.zte.com.cn'
+$env.https_proxy = 'localhost:1080'
+$env.http_proxy = 'localhost:1080'
+$env.no_proxy = 'localhost,127.0.0.1,.zte.com.cn'
 
 # ::plugins::
 # fzf
-let-env FZF_DEFAULT_COMMAND = 'fd --type f --color never'
-let-env FZF_DEFAULT_OPTS = '--color=bg+:-1,bg:-1 --preview-window=0'
-let-env FZF_CTRL_T_COMMAND = 'fd --type f --color never'
-let-env FZF_ALT_C_COMMAND = 'fd --type d --color never'
+$env.FZF_DEFAULT_COMMAND = 'fd --type f --color never'
+$env.FZF_DEFAULT_OPTS = '--color=bg+:-1,bg:-1 --preview-window=0'
+$env.FZF_CTRL_T_COMMAND = 'fd --type f --color never'
+$env.FZF_ALT_C_COMMAND = 'fd --type d --color never'
 
 # zoxide
-let-env _ZO_FZF_OPTS = $"($env.FZF_DEFAULT_OPTS) --layout=reverse --height=30%"
+$env._ZO_FZF_OPTS = $"($env.FZF_DEFAULT_OPTS) --layout=reverse --height=30%"
 source ~/.cache/zoxide/init.nu
 
 # starship
-let-env STARSHIP_CONFIG = $"($env.APPDATA)/starship/config.toml"
+$env.STARSHIP_CONFIG = $"($env.APPDATA)/starship/config.toml"
 source ~/.cache/starship/init.nu
 
 module completions {
@@ -319,7 +320,7 @@ let light_theme = {
 
 
 # The default config record. This is where much of your global configuration is setup.
-let-env config = {
+$env.config = {
   ls: {
     use_ls_colors: true # use the LS_COLORS environment variable to colorize output
     clickable_links: true # enable or disable clickable links. Your terminal has to support links.
@@ -398,7 +399,7 @@ let-env config = {
   }
 
   history: {
-    max_size: 10000 # Session has to be reloaded for this to take effect
+    max_size: 100000 # Session has to be reloaded for this to take effect
     sync_on_enter: true # Enable to share history between multiple sessions, else you have to close the session to write history to file
     file_format: "sqlite" # "sqlite" or "plaintext"
   }
@@ -477,7 +478,7 @@ let-env config = {
             description_text: yellow
         }
         source: { |buffer, position|
-            open $"($nu.history-path)" | query db $"select command_line as value from history where exit_status != 1 and command_line like '($buffer)%' group by command_line order by id desc limit 100"
+            open $"($nu.history-path)" | query db $"select command_line as value from history where exit_status != 1 and command_line like '%($buffer)%' order by id desc limit 1000" | uniq
         }
       }
       {

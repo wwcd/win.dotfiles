@@ -2,10 +2,7 @@ font:
   normal:
     # family: Cascadia Code PL
     family: ComicShannsMono Nerd Font
-    # family: JetBrainsMono Nerd Font
-    # family: Hack Nerd Font
-    # family: FantasqueSansM Nerd Font
-    # style: Regular
+    style: Regular
   size: 10.5
 
 shell:
@@ -19,6 +16,8 @@ window:
   padding:
     x: 3 
     y: 1
+  title: alacritty
+  dynamic_title: false
 
 working_directory: 'C:\Users\WSL'
 
@@ -61,3 +60,7 @@ colors:
     magenta: '0xc678dd'
     cyan:    '0x56b6c2'
     white:   '0xffffff'
+
+# debug:
+#   persistent_logging: true
+#   log_level: Trace

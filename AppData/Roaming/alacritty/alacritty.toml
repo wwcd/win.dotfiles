@@ -1,0 +1,82 @@
+import = ['~\AppData\Roaming\alacritty\theme\tokyonight.toml']
+
+[font]
+size = 10.5
+
+[font.normal]
+# family = "CaskaydiaCove Nerd Font"
+family = "ComicShannsMono Nerd Font"
+# family = "FantasqueSansM Nerd Font"
+# family = "Hack Nerd Font"
+
+[font.bold]
+style = "Regular"
+
+[font.bold_italic]
+style = "Italic"
+
+[font.offset]
+x = 0
+y = -1
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[shell]
+program = "nu"
+
+[window]
+dynamic_title = false
+title = "alacritty"
+opacity = 0.98
+
+[window.padding]
+x = 3
+y = 1
+
+[[keyboard.bindings]]
+action = "CreateNewWindow"
+key = "N"
+mods = "Shift|Control"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "Insert"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "Insert"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ScrollLineUp"
+key = "Up"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ScrollLineDown"
+key = "Down"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ScrollPageUp"
+key = "Up"
+mods = "Shift|Control"
+
+[[keyboard.bindings]]
+action = "ScrollPageDown"
+key = "Down"
+mods = "Shift|Control"
+
+[[keyboard.bindings]]
+action = "ScrollToTop"
+key = "Up"
+mods = "Shift|Control|Alt"
+
+[[keyboard.bindings]]
+action = "ScrollToBottom"
+key = "Down"
+mods = "Shift|Control|Alt"
+
