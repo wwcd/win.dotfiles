@@ -1,13 +1,13 @@
-import = ['~\AppData\Roaming\alacritty\theme\tokyonight.toml']
+import = ['~\AppData\Roaming\alacritty\theme\onedark.toml']
 
 [font]
 size = 10.5
 
 [font.normal]
 # family = "CaskaydiaCove Nerd Font"
-family = "ComicShannsMono Nerd Font"
+family = "ComicShannsMono Nerd Font Mono"
 # family = "FantasqueSansM Nerd Font"
-# family = "Hack Nerd Font"
+style = "Regular"
 
 [font.bold]
 style = "Regular"
@@ -16,6 +16,10 @@ style = "Regular"
 style = "Italic"
 
 [font.offset]
+x = 0
+y = -1
+
+[font.glyph_offset]
 x = 0
 y = -1
 
@@ -28,8 +32,9 @@ program = "nu"
 
 [window]
 dynamic_title = false
-title = "alacritty"
-opacity = 0.98
+title = "Alacritty"
+opacity = 0.999
+blur = true
 
 [window.padding]
 x = 3

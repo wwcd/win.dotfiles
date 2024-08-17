@@ -31,7 +31,7 @@ let dark_theme = {
     list: white
     block: white
     hints: dark_gray
-    search_result: {bg: red fg: white}    
+    search_result: {bg: red fg: white}
     shape_and: purple_bold
     shape_binary: purple_bold
     shape_block: blue_bold
@@ -94,7 +94,7 @@ let light_theme = {
     list: white
     block: white
     hints: dark_gray
-    search_result: {fg: white bg: red}    
+    search_result: {fg: white bg: red}
     shape_and: purple_bold
     shape_binary: purple_bold
     shape_block: blue_bold
@@ -148,10 +148,6 @@ $env.config = {
 
     rm: {
         always_trash: false # always act as if -t was given. Can be overridden with -p
-    }
-
-    cd: {
-        abbreviations: false # allows `cd s/o/f` to expand to `cd some/other/folder`
     }
 
     table: {
@@ -240,7 +236,6 @@ $env.config = {
     use_ansi_coloring: true
     bracketed_paste: true # enable bracketed paste, currently useless on windows
     edit_mode: emacs # emacs, vi
-    shell_integration: false # enables terminal shell integration. Off by default, as some terminals have issues with this.
     render_right_prompt_on_last_line: false # true or false to enable or disable right prompt to be rendered on last line of the prompt.
 
     hooks: {
@@ -285,7 +280,7 @@ $env.config = {
                 description_text: yellow
             }
             source: { |buffer, position|
-                open $"($nu.history-path)" | query db $"select command_line as value from history where exit_status != 1 and command_line like '%($buffer)%' group by command_line order by id desc limit 100"
+                open $"($nu.history-path)" | query db $"select command_line as value from history where exit_status != 1 and command_line like '%($buffer)%' order by id desc limit 888" |uniq
             }
         }
         {
