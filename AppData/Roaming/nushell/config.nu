@@ -904,6 +904,7 @@ $env.config = {
 
 alias ll = lsd -la
 alias vim = nvim
+alias vi = nvim
 alias g = git
 
 $env.https_proxy = '127.0.0.1:1080'

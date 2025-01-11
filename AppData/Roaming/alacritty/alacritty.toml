@@ -1,3 +1,4 @@
+[general]
 import = ['~\AppData\Roaming\alacritty\theme\onedark.toml']
 
 [font]
@@ -24,10 +25,10 @@ x = 0
 y = -1
 
 [scrolling]
-history = 10000
+history = 99999
 multiplier = 3
 
-[shell]
+[terminal.shell]
 program = "nu"
 
 [window]
@@ -84,4 +85,3 @@ mods = "Shift|Control|Alt"
 action = "ScrollToBottom"
 key = "Down"
 mods = "Shift|Control|Alt"
-
