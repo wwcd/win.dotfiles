@@ -1,10 +1,8 @@
 return {
+  -- Treesitter
   {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
-    dependencies = {
-      { "nushell/tree-sitter-nu", build = ":TSUpdate nu" },
-    },
     config = function()
       require 'nvim-treesitter.configs'.setup({
         ensure_installed = {
@@ -19,13 +17,17 @@ return {
           'go',
           'gomod',
           'gosum',
+          'gotmpl',
           'gowork',
           'groovy',
+          'helm',
           'html',
           'ini',
           'javascript',
           'json',
           'jsonc',
+          'jinja',
+          'jinja_inline',
           -- 'lua',
           'luadoc',
           'make',
@@ -42,8 +44,12 @@ return {
           -- 'vimdoc',
           'xml',
           'yaml',
+          'nu',
         },
-        -- ignore_install = { 'wgsl', 'wgsl_bevy', 'gleam', 'smali' },
+        sync_install = false,
+        auto_install = true,
+        ignore_install = {},
+        modules = {},
         highlight = {
           enable = true,
           additional_vim_regex_highlighting = false,
@@ -68,26 +74,11 @@ return {
           enable = true,
         }
       })
-      local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
-      parser_config.gotmpl = {
-        install_info = {
-          url = 'https://github.com/wwcd/tree-sitter-go-template',
-          branch = 'master',
-          files = { 'src/parser.c' }
-        },
-        filetype = 'gotmpl',
-        used_by = { 'gohtmltmpl', 'gotexttmpl', 'gotmpl' }
-      }
-      parser_config.jinja2 = {
-        install_info = {
-          url = 'https://github.com/theHamsta/tree-sitter-jinja2',
-          branch = 'master',
-          files = { 'src/parser.c' }
-        },
-        filetype = 'jinja2',
-        used_by = { 'jinja2' }
-      }
     end
   },
-  { 'nvim-treesitter/nvim-treesitter-textobjects' },
+  -- Textobjects
+  {
+    'nvim-treesitter/nvim-treesitter-textobjects',
+    event = "VeryLazy",
+  },
 }

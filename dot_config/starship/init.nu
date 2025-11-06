@@ -5,7 +5,7 @@
 export-env { $env.STARSHIP_SHELL = "nu"; load-env {
     STARSHIP_SESSION_KEY: (random chars -l 16)
     PROMPT_MULTILINE_INDICATOR: (
-        ^'starship.exe' prompt --continuation
+        ^'C:\ProgramData\chocolatey\bin\starship.exe' prompt --continuation
     )
 
     # Does not play well with default character module.
@@ -15,7 +15,7 @@ export-env { $env.STARSHIP_SHELL = "nu"; load-env {
     PROMPT_COMMAND: {||
         # jobs are not supported
         (
-            ^'starship.exe' prompt
+            ^'C:\ProgramData\chocolatey\bin\starship.exe' prompt
                 --cmd-duration $env.CMD_DURATION_MS
                 $"--status=($env.LAST_EXIT_CODE)"
                 --terminal-width (term size).columns
@@ -26,13 +26,14 @@ export-env { $env.STARSHIP_SHELL = "nu"; load-env {
         render_right_prompt_on_last_line: true
     })
 
-    PROMPT_COMMAND_RIGHT: {||
-        (
-            ^'starship.exe' prompt
-                --right
-                --cmd-duration $env.CMD_DURATION_MS
-                $"--status=($env.LAST_EXIT_CODE)"
-                --terminal-width (term size).columns
-        )
-    }
+    # PROMPT_COMMAND_RIGHT: {||
+    #     (
+    #         ^'C:\ProgramData\chocolatey\bin\starship.exe' prompt
+    #             --right
+    #             --cmd-duration $env.CMD_DURATION_MS
+    #             $"--status=($env.LAST_EXIT_CODE)"
+    #             --terminal-width (term size).columns
+    #     )
+    # }
+    PROMPT_COMMAND_RIGHT: ""
 }}

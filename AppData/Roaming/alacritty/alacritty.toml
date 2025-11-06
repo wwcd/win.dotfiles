@@ -1,13 +1,22 @@
 [general]
-import = ['~\AppData\Roaming\alacritty\theme\onedark.toml']
+import = ['~\AppData\Roaming\alacritty\themes\themes\one_dark.toml']
+
+[env]
+TERM = "alacritty"
+
+[cursor]
+blink_interval = 750
+
+[cursor.style]
+blinking = "Always"
 
 [font]
-size = 10.5
+size = 10
 
 [font.normal]
-# family = "CaskaydiaCove Nerd Font"
 family = "ComicShannsMono Nerd Font Mono"
-# family = "FantasqueSansM Nerd Font"
+# family = "FantasqueSansM Nerd Font Mono"
+# family = "Cascadia Code NF"
 style = "Regular"
 
 [font.bold]
@@ -33,12 +42,12 @@ program = "nu"
 
 [window]
 dynamic_title = false
-title = "Alacritty"
-opacity = 0.999
+title = "TTY"
+opacity = 0.9999
 blur = true
 
 [window.padding]
-x = 3
+x = 1
 y = 1
 
 [[keyboard.bindings]]

@@ -25,13 +25,14 @@ $env.config.history.file_format = "sqlite"
 
 $env.https_proxy = '127.0.0.1:1080'
 $env.http_proxy = '127.0.0.1:1080'
-$env.no_proxy = 'localhost,127.0.0.1,.zte.com.cn'
+$env.no_proxy = 'localhost,127.0.0.1'
 
 # alias
 alias ll = lsd -la
 alias vim = nvim
 alias vi = nvim
 alias g = git
+alias cat = bat
 
 # plugins
 ## fzf
