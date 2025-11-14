@@ -23,10 +23,6 @@ $env.config.buffer_editor = "nvim"
 $env.config.show_banner = false
 $env.config.history.file_format = "sqlite"
 
-$env.https_proxy = '127.0.0.1:1080'
-$env.http_proxy = '127.0.0.1:1080'
-$env.no_proxy = 'localhost,127.0.0.1'
-
 # alias
 alias ll = lsd -la
 alias vim = nvim

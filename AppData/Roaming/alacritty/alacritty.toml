@@ -1,8 +1,8 @@
 [general]
 import = ['~\AppData\Roaming\alacritty\themes\themes\one_dark.toml']
 
-[env]
-TERM = "alacritty"
+# [env]
+# TERM = "alacritty"
 
 [cursor]
 blink_interval = 750
@@ -42,7 +42,7 @@ program = "nu"
 
 [window]
 dynamic_title = false
-title = "TTY"
+# title = ""
 opacity = 0.9999
 blur = true
 
