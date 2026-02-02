@@ -1,9 +1,6 @@
 [general]
 import = ['~\AppData\Roaming\alacritty\themes\themes\one_dark.toml']
 
-# [env]
-# TERM = "alacritty"
-
 [cursor]
 blink_interval = 750
 

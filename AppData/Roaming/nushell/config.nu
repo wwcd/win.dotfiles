@@ -44,3 +44,13 @@ source ~/.config/zoxide/init.nu
 ## starship
 $env.STARSHIP_CONFIG = $"($env.APPDATA)/starship/config.toml"
 source ~/.config/starship/init.nu
+
+
+## color
+# source ~/AppData/Roaming/nushell/nu_scripts/themes/nu-themes/onedark.nu
+
+## completions
+# source ~/AppData/Roaming/nushell/nu_scripts/custom-completions/git/git-completions.nu
+# source ~/AppData/Roaming/nushell/nu_scripts/custom-completions/winget/winget-completions.nu
+# source ~/AppData/Roaming/nushell/nu_scripts/custom-completions/zoxide/zoxide-completions.nu
+
