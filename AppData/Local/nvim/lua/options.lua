@@ -7,6 +7,14 @@ vim.g.loaded_node_provider = 0
 vim.g.loaded_perl_provider = 0
 vim.g.loaded_ruby_provider = 0
 
+-- For performance
+vim.g.loaded_matchit = 1
+vim.g.loaded_matchparen = 1
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_2html_plugin = 1
+vim.g.loaded_tutor_mode_plugin = 1
+
 -- Setting
 vim.opt.cmdheight = 2
 vim.opt.showmatch = true
@@ -35,6 +43,7 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.diffopt = { "internal", "filler", "closeoff", "algorithm:histogram", "indent-heuristic", "linematch:60", "iwhite" }
 vim.opt.fileencodings = { "ucs-bom", "utf-8", "gb18030", "gbk", "latin1" }
+vim.opt.shortmess = 'I'
 
 -- Misc
 vim.loader.enable()
