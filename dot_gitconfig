@@ -1,0 +1,53 @@
+[user]
+    name = wsl
+    email = wsl@noreply.pseudo
+[alias]
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    changes = diff --name-status -r
+    diffstat = diff --stat -r
+    whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=iso
+    pwhatis = show -s --pretty='tformat:%h, %s, %ad' --date=iso
+    ci = commit
+    co = checkout
+    st = status
+    br = branch
+    di = diff
+    ds = diff --staged
+    sw = switch
+    cp = cherry-pick
+[merge]
+    tool = vimdiff
+[mergetool "vimdiff"]
+    path = vim
+[mergetool]
+    prompt = false
+[color]
+    ui = true
+[push]
+    default = simple
+; [pull]
+;     rebase = true
+[fetch]
+    prune = true
+[credential]
+    helper = store
+[core]
+    editor = vim
+    pager = delta
+    autocrlf = false
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+[delta]
+    navigate = true
+    side-by-side = true
+    tabs = 2
+[delta "interactive"]
+    keep-plus-minus-markers = false
+[http]
+    sslVerify = false
+[tag]
+    sort = creatordate
+[branch]
+    sort = creatordate
+[init]
+    defaultBranch = main
