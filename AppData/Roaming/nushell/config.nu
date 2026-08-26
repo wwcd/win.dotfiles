@@ -34,9 +34,10 @@ alias diff = delta
 # plugins
 ## fzf
 $env.FZF_DEFAULT_COMMAND = 'fd --type f --color never'
-$env.FZF_DEFAULT_OPTS = '--color=bg+:-1,bg:-1 --preview-window=0'
+$env.FZF_DEFAULT_OPTS = '--color=bg+:-1,bg:-1 --style minimal --prompt="❯ " --gutter=" " --height=30%'
 $env.FZF_CTRL_T_COMMAND = 'fd --type f --color never'
 $env.FZF_ALT_C_COMMAND = 'fd --type d --color never'
+source ~/.config/fzf/init.nu
 
 ## zoxide
 $env._ZO_FZF_OPTS = $"($env.FZF_DEFAULT_OPTS) --layout=reverse --height=30%"

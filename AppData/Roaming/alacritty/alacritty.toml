@@ -5,7 +5,7 @@ import = ['~\AppData\Roaming\alacritty\themes\themes\one_dark.toml']
 blink_interval = 750
 
 [cursor.style]
-blinking = "Always"
+blinking = "Off"
 
 [font]
 size = 10
@@ -38,7 +38,7 @@ program = "nu"
 
 [window]
 dynamic_title = false
-# title = ""
+title = ""
 opacity = 0.9999
 blur = true
 
