@@ -21,14 +21,16 @@
 # config
 $env.config.buffer_editor = "nvim"
 $env.config.show_banner = false
+$env.config.show_hints = false
 $env.config.history.file_format = "sqlite"
+$env.config.status_line.enable = false
 
 # alias
 alias ll = lsd -la
 alias vim = nvim
 alias vi = nvim
 alias g = git
-alias cat = bat
+alias cat = bat -Pp
 alias diff = delta
 
 # plugins

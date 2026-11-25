@@ -12,7 +12,7 @@ size = 10
 
 [font.normal]
 family = "ComicShannsMono Nerd Font Mono"
-# family = "FantasqueSansM Nerd Font Mono"
+# family = "Monaspace Argon NF"
 style = "Regular"
 
 [font.bold]
@@ -38,7 +38,7 @@ program = "nu"
 
 [window]
 dynamic_title = false
-title = ""
+title = "Steven"
 opacity = 0.9999
 blur = true
 

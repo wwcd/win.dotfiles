@@ -21,13 +21,7 @@ export-env { $env.STARSHIP_SHELL = "nu"; load-env {
                 --cmd-duration $cmd_duration
                 $"--status=($env.LAST_EXIT_CODE)"
                 --terminal-width (term size).columns
-                ...(
-                    if (which "job list" | where type == built-in | is-not-empty) {
-                        ["--jobs", (job list | length)]
-                    } else {
-                        []
-                    }
-                )
+                --jobs (job list | length)
         )
     }
 
